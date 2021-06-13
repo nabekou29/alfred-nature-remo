@@ -1,0 +1,43 @@
+[package]
+name = "alfred-nature-remo"
+version = "0.1.0"
+authors = ["nabekou29 <nabekou0729@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+alfred = "4.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+nature_remo = { path = "./nature_remo" }
+
+[workspace]
+members = [
+    "nature_remo"
+]
+
+[[bin]]
+name = "appliances"
+path = "src/appliances.rs"
+
+[[bin]]
+name = "aircon_select_target"
+path = "src/aircon_select_target.rs"
+
+[[bin]]
+name = "aircon_select_value"
+path = "src/aircon_select_value.rs"
+
+[[bin]]
+name = "aircon_post"
+path = "src/aircon_post.rs"
+
+[[bin]]
+name = "light"
+path = "src/light.rs"
+
+[[bin]]
+name = "light_post"
+path = "src/light_post.rs"
